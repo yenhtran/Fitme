@@ -1,0 +1,12 @@
+<div class="navbar">
+	<a class="nav-fitme" href="/workouts">FitMe</a>
+	<ul class="nav-create">
+		<li><a href="/workouts/new" type="button">Create a new workout!</a></li>
+	</ul>
+	<ul class="nav-username">
+		<li><a href="#">Hello <%= get_current_user.user_name %></a></li>
+		<form action="/sessions/<%= session[:user_id] %>" method="POST">
+			<input class="logout" type="submit" value="Log Out">
+		</form>
+	</ul>
+</div>

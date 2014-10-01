@@ -22,3 +22,9 @@ delete '/workouts/:id/delete' do
 	workout.destroy
 	redirect '/workouts'
 end
+
+post '/workouts/:id/create_exercise' do
+  @workout = Workout.find params[:id]
+  Exercise.create(name: params[:name], description: params[:description], target_zone: params[:target_zone], intensity: params[:intensity], workout_id: params[:workout_id])
+  redirect "/workouts/#{@workout.id}"
+end
