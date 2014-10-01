@@ -25,3 +25,20 @@ chromedriver.log
 bin/
 .env
 *.swp
+
+FitBit
+
+Client (Consumer) Key
+2e6b5a059ce843f68e95df02be282357
+
+Client (Consumer) Secret
+e3063941e2434c1e88dd76dd44e9179f
+
+Temporary Credentials (Request Token) URL
+https://api.fitbit.com/oauth/request_token
+
+Token Credentials (Access Token) URL
+https://api.fitbit.com/oauth/access_token
+
+Authorize URL
+https://www.fitbit.com/oauth/authorize
