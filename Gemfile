@@ -16,6 +16,7 @@ gem 'rake'
 gem 'shotgun'
 gem 'bcrypt-ruby'
 gem 'fitbit', '~> 0.2.0'
+gem 'paperclip', '~> 4.2'
 
 group :test do
   gem 'shoulda-matchers'
