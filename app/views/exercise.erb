@@ -1,0 +1,27 @@
+<div>
+	<h2><%= @workout.name %></h2>
+
+	<table class="exercise-table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Target_zone</th>
+        <th>Intensity</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @all_exercises.each do |exercise| %>
+         <tr>
+          <td><%= exercise.name %></td>
+          <td><%= exercise.description %></td>
+          <td><%= exercise.target_zone %></td>
+          <td><%= exercise.intensity %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <a href="/workouts">Back to workouts</a>
+</div>
+

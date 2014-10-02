@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html>
+  <div id="background">
+    <img src="/images/gradient.png">
+  </div>
+	<div id="background-img">
+		<img src="/images/background_image.png" class="stretch">
+	</div>
 <head>
   <title></title>
 </head>
 <body>
-
   <% if session[:user_id] %>
-  <%= erb :_navbar %>
+  	<%= erb :_navbar %>
   <% end %>
 
   <%= yield %>

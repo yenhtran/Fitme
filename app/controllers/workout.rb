@@ -28,3 +28,9 @@ post '/workouts/:id/create_exercise' do
   Exercise.create(name: params[:name], description: params[:description], target_zone: params[:target_zone], intensity: params[:intensity], workout_id: params[:workout_id])
   redirect "/workouts/#{@workout.id}"
 end
+
+get '/workouts/:id/start' do
+	@workout = Workout.find(params[:id])
+	@all_exercises = @workout.exercises
+ 	erb :exercise
+end
