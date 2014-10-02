@@ -20,3 +20,12 @@ post '/sessions' do
 		redirect "/sessions/error/#{error_code}"
 	end
 end
+
+post '/sessions/:id' do
+  # p session[:user_id]
+  # p params[:id]
+  if session[:user_id] == params[:id].to_i
+    session[:user_id] = nil
+  end
+  redirect '/'
+end
