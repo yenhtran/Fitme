@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 <html>
-<div id="background">
-  <img src="/images/gradient.png">
-</div>
-<div id="background-img">
-  <img src="/images/background_image.png" class="stretch">
-</div>
-<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-<meta charset="utf-8">
+<!-- <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+<meta charset="utf-8"> -->
 <head>
   <title></title>
 </head>
 <body>
-  <% if session[:user_id] %>
-  <%= erb :_navbar %>
-  <% end %>
-
+  <div id="wrapper">
+    <div id="background">
+      <img src="/images/gradient.png">
+    </div>
+    <div id="background-img">
+      <img src="/images/background_image.png" class="stretch">
+    </div>
+    <% if session[:user_id] %>
+    <%= erb :_navbar %>
+    <% end %>
     <%= yield %>
-
-  <div id="map-canvas"></div>
+  </div>
+<!-- 
+  <div id="map-canvas"></div> -->
 
   <link rel="stylesheet" href="/css/normalize.css">
   <link rel="stylesheet" href="/css/application.css">

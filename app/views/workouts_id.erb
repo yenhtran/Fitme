@@ -1,58 +1,57 @@
 <div class="parent">
-<div id="edit-workout">
+	<div id="edit-workout">
 		<a href='/workouts'>Return to Workouts</a>
-	<h1><%= @workout.name %></h1>
-	<form action="/workouts/<%= @workout.id %>/delete" method="post">
-		<input type="hidden" name="_method" value="delete">
-		<input type="submit" value="Delete Workout">
-	</form>
-	<h3>Edit workout: <%= @workout.name %></h3>
-	<p>Load your workout program with exercises</p>
-	<div class="create-workout">
-		<form action="/workouts/<%= @workout.id %>/create_exercise" method="post">
-			<section>
-				<input type="hidden" name="workout_id" value="<%= @workout.id %>">
+		<h1><%= @workout.name %></h1>
+		<form action="/workouts/<%= @workout.id %>/delete" method="post">
+			<input type="hidden" name="_method" value="delete">
+			<input type="submit" value="Delete Workout">
+		</form><br>
+		<h3>Edit workout: <%= @workout.name %></h3>
+		<p>Load your workout program with exercises</p>
+		<div class="create-workout">
+			<form action="/workouts/<%= @workout.id %>/create_exercise" method="post">
+					<input type="hidden" name="workout_id" value="<%= @workout.id %>">
 
-				<label for="move">Move: </label><input type="text" name="name" placeholder="Exercise"><br>
+					<label for="move">Move: </label><input type="text" name="name" placeholder="Exercise"><br>
 
-				<label for="description">Description: </label><textarea rows="4" cols="20" name="description" placeholder="Description"></textarea><br>
-				<label for="targetzone">Target Zone: </label><input type="text" name="target_zone" placeholder="Target Zone"><br>
-				<label for="targetzone">Add an Image: </label><input type="text" name="image" placeholder="Image Path"><br>
-				<label for="intensity">Intensity Level: </label>
-				<select name="intensity" placeholder="Intensity"><br>
-					<option value="easy">Easy Peasy</option>
-					<option value="intermediate">Intermediate</option>
-					<option value="hard">Crazy F**king Hard</option>
-				</select>
-				<button class="add" type="submit">Add Exercise</button>
-			</section>
-		</form>
+					<label for="description">Description: </label><textarea rows="4" cols="20" name="description" placeholder="Description"></textarea><br>
+					<label for="targetzone">Target Zone: </label><input type="text" name="target_zone" placeholder="Target Zone"><br>
+					<label for="targetzone">Add an Image: </label><input type="text" name="image" placeholder="Image Path"><br>
+					<label for="intensity">Intensity Level: </label>
+					<select name="intensity" placeholder="Intensity"><br>
+						<option value="easy">Easy Peasy</option>
+						<option value="intermediate">Intermediate</option>
+						<option value="hard">Crazy F**king Hard</option>
+					</select>
+					<button class="add" type="submit">Add Exercise</button>
+			</form>
+		</div>
 	</div>
-</div>
 
 
-<div class="workout_list">
-	<h1>Exercises in this workout</h1>
-	<table class="exercise_table">
-		<thead>
-			<tr>
-				<th>Name</th>
-				<th>Description</th>
-				<th>Target_zone</th>
-				<th>Intensity</th>
-				<th></th>
-			</tr>
-		</thead>
-		<tbody>
-			<% @workout.exercises.each do |exercise| %>
-			<tr>
-				<td><%= exercise.name %></td>
-				<td><%= exercise.description %></td>
-				<td><%= exercise.target_zone %></td>
-				<td><%= exercise.intensity %></td>
-				<td><a href="/exercises/<%= exercise.id%>/delete">Delete</a></td>
-			</tr>
-			<% end %>
-		</tbody>
-	</table>
+	<div class="workout_list">
+		<h1>Exercises in this workout</h1>
+		<table class="exercise_table">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Description</th>
+					<th>Target_zone</th>
+					<th>Intensity</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				<% @workout.exercises.each do |exercise| %>
+				<tr>
+					<td><%= exercise.name %></td>
+					<td><%= exercise.description %></td>
+					<td><%= exercise.target_zone %></td>
+					<td><%= exercise.intensity %></td>
+					<td><a href="/exercises/<%= exercise.id%>/delete">Delete</a></td>
+				</tr>
+				<% end %>
+			</tbody>
+		</table>
+	</div>
 </div>
