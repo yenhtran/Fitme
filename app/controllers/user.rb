@@ -10,3 +10,7 @@ post '/users' do
 
 	redirect '/sessions/new'
 end
+
+get '/users/map' do
+	erb :map
+end

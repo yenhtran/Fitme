@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 <html>
-  <div id="background">
-    <img src="/images/gradient.png">
-  </div>
-	<div id="background-img">
-		<img src="/images/background_image.png" class="stretch">
-	</div>
+<div id="background">
+  <img src="/images/gradient.png">
+</div>
+<div id="background-img">
+  <img src="/images/background_image.png" class="stretch">
+</div>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+<meta charset="utf-8">
 <head>
   <title></title>
 </head>
 <body>
   <% if session[:user_id] %>
-  	<%= erb :_navbar %>
+  <%= erb :_navbar %>
   <% end %>
 
-  <%= yield %>
+    <%= yield %>
+
+  <div id="map-canvas"></div>
 
   <link rel="stylesheet" href="/css/normalize.css">
   <link rel="stylesheet" href="/css/application.css">
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="/js/application.js"></script>
   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQ3jXeEZ4nOJBcbpURRZ5D1gIiFtmenVQ"></script>
-
+  <!-- // <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script> -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 </body>
 </html>

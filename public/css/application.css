@@ -46,22 +46,16 @@ body {
   color: #E2DDDD;
 }
 
-label, input {
+/*label, input {
   display: inline-block;
   vertical-align: baseline;
   width: 125px;
-}
-
+}*/
+/*
 label {
     color: #2D2D2D;
     font-size: 20px;
-}
-
-div.create-workout {
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-}
+}*/
 
 table {
   width: 800px;
@@ -82,14 +76,14 @@ th {
   border-top: 1px solid #999;
 }
 
-fieldset {
+/*section {
   width: 40%;
   margin-top: 20px;
   border: none;
   text-align: left;
   margin-left: auto;
   margin-right: auto;
-}
+}*/
 
 #map-canvas {
   height: 50%;
@@ -115,16 +109,16 @@ fieldset {
   border-radius: 10px;
 }
 
-#edit-workout {
+/*#edit-workout {
   padding: 2%;
   margin-left: 10%;
   margin-right: 60%;
   margin-top: 10%;
   background-color: #804A5C;
   border-radius: 10px;
-}
+}*/
 
-#workout-list{
+#workout_list{
   padding: 2%;
   margin-left: 60%;
   margin-right: 10%;
@@ -132,4 +126,12 @@ fieldset {
   background-color: #804A5C;
   border-radius: 10px;
 }
-  
+
+#logout {
+  padding-right: 2%;
+  float: right;
+}
+
+div #workout-list {
+  color: red;
+}

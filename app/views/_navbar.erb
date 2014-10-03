@@ -2,9 +2,10 @@
 	<!-- <div id="nav-wrapper"> -->
 		<ul>
 			<li><a href="/workouts">FitMe</a></li>
-			<li><a href="/workouts/new" type="button">Create a new workout!</a></li>
 			<li><a href="#">Hello <%= get_current_user.user_name %></a></li>
-			<form action="/sessions/<%= session[:user_id] %>" method="POST">
+			<li><a href="/workouts/new" type="button">Create a new workout!</a></li>
+			<li><a href="/" type="button">Find a gym near you!</a></li>
+			<form id="logout" action="/sessions/<%= session[:user_id] %>" method="POST">
 				<input class="logout" type="submit" value="Log Out">
 			</form>
 		</ul>
